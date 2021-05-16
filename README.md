@@ -4,7 +4,7 @@ This is the Github Repository for the code and data used in the exploration, ana
 ## Data Source
 - COVID-19India API
 - MoHFW
-- Department of Health, Kerala
+- Department of Health Services, Kerala
 
 ## Team
 - Dr. Arun Mitra
