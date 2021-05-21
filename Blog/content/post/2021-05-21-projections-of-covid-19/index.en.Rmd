@@ -1,0 +1,28 @@
+---
+title: Projections of COVID-19
+author: Arun Mitra
+date: '2021-05-21'
+slug: projections-of-covid-19
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-05-21T14:21:02+05:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+This is on the projections
+
+
+```{r}
+plot(mtcars)
+```
+
+
+
