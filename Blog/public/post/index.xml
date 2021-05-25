@@ -1,48 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | Academic</title>
-    <link>/post/</link>
-      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <title>Posts | COVID-19 India Analytics</title>
+    <link>https://bijusoman.com/post/</link>
+      <atom:link href="https://bijusoman.com/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arun Mitra (2021)</copyright><lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>https://bijusoman.com/media/icon_hu39b6d3838b248bfe44eddd3bd3552f4d_179423_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
-      <link>/post/</link>
+      <link>https://bijusoman.com/post/</link>
     </image>
     
     <item>
       <title>Projections of COVID-19</title>
-      <link>/post/projections-of-covid-19/</link>
+      <link>https://bijusoman.com/post/projections-of-covid-19/</link>
       <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
-      <guid>/post/projections-of-covid-19/</guid>
+      <guid>https://bijusoman.com/post/projections-of-covid-19/</guid>
       <description>
-&lt;script src=&#34;/post/projections-of-covid-19/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/projections-of-covid-19/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;This is on the projections&lt;/p&gt;
+&lt;p&gt;With the second wave of COVID-19 epidemic wreaking havoc in India, the daily caseload is still on the rise. Though there are many models predicting the daily incidence of new COVID-19 infections, the estimates provided are have high degree of uncertaininty and error. There is an urgent need for robust estimates that may aid the district level programme managers in public health decision making.&lt;/p&gt;
+&lt;p&gt;This blog post aims at providing robust estimates of daily incidence of COVID-19 for different states of India. The methodology presented here is part of a larger study that involves data science approach and epidemiological techniques in transforming routine data into actionable evidence.&lt;/p&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data&lt;/h2&gt;
+&lt;p&gt;The crowdsourced database and website maintained at &lt;a href=&#34;https://covid19india.org&#34; class=&#34;uri&#34;&gt;https://covid19india.org&lt;/a&gt; has been used for the analysis. The application programming interface (API) provides curated datasets available for public use and research purposes. The downloadable dataset is updated regularly and contains the latest available public data on COVID-19 in India.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;methodology&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Methodology&lt;/h2&gt;
+&lt;p&gt;Before we can make any projections of future daily cases, we need to make some considerations about the data and the COVID-19 epidemic. For the purpose of projecting the daily incident cases, we would consider the data is representative of the true reality.&lt;/p&gt;
+&lt;p&gt;Taking into consideration the second wave of COVID-19 in India, we thought the best time to freeze the dataset would be 1st May 2021. This was done to include the most recent data but also to avoid any technical or erroneous entries in the recent past, which are usually rectified in a few days. We also decided the number of days for the projection of future incidence to be 15 as any projection beyond two weeks would mean a wide confidence interval and high error rate. Also, as the model is based on the regression of log incidence over time, it would be subject to overestimation as time progresses. We decided on a 14-day moving average of the daily incident cases for modeling the future projections. For the epidemic simulation, we assumed that the branching process of the probability mass function follows a Poisson distribution.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(mtcars)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/projections-of-covid-19/index.en_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bijusoman.com/post/projections-of-covid-19/index.en_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Based on these considerations, we then divided the dataset into two based on the date, 15th April 2021. The cases before 15th April 2021 were used to estimate the effective reproduction number by the time-dependent method developed by Wallinga and Teunis and improved by Cauchemez and colleagues.@cauchemez2006ajoe; &lt;span class=&#34;citation&#34;&gt;&lt;a href=&#34;#ref-wallinga2004aje&#34; role=&#34;doc-biblioref&#34;&gt;Wallinga and Teunis&lt;/a&gt; (&lt;a href=&#34;#ref-wallinga2004aje&#34; role=&#34;doc-biblioref&#34;&gt;2004&lt;/a&gt;)&lt;/span&gt; The effective reproduction number of 15th April 2021 was then extracted and provided as a hyperparameter for the epidemic simulation along with the distribution of the serial interval. As already described, we projected for each state the daily incident cases for the next 15 days and plotted against the observed 14-day moving average to check for the robustness of the effective reproduction number and the validity of the projections.&lt;/p&gt;
+&lt;p&gt;Much of the tools used in the analysis stem from the packages developed by RECON (REpidemicsConsortium) which is a group of experts in data
+science, modelling methodology, public health, and software development in R like &lt;code&gt;distcrete&lt;/code&gt;, &lt;code&gt;EpiEstim&lt;/code&gt; , &lt;code&gt;earlyR&lt;/code&gt;, &lt;code&gt;epitrix&lt;/code&gt;, &lt;code&gt;incidence&lt;/code&gt;, and &lt;code&gt;projections&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references csl-bib-body hanging-indent&#34;&gt;
+&lt;div id=&#34;ref-wallinga2004aje&#34; class=&#34;csl-entry&#34;&gt;
+Wallinga, Jacco, and Peter Teunis. 2004. &lt;span&gt;“Different Epidemic Curves for Severe Acute Respiratory Syndrome Reveal Similar Impacts of Control Measures.”&lt;/span&gt; &lt;em&gt;American Journal of Epidemiology&lt;/em&gt; 160 (6): 509–16. &lt;a href=&#34;https://doi.org/10.1093/aje/kwh255&#34;&gt;https://doi.org/10.1093/aje/kwh255&lt;/a&gt;.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>COVID-19 Epidemic in India</title>
-      <link>/post/covid-19-epidemic-in-india/</link>
+      <link>https://bijusoman.com/post/covid-19-epidemic-in-india/</link>
       <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
-      <guid>/post/covid-19-epidemic-in-india/</guid>
+      <guid>https://bijusoman.com/post/covid-19-epidemic-in-india/</guid>
       <description>
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/post/covid-19-epidemic-in-india/index.en_files/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/moment/moment.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/moment/moment.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The importance of epidemic curves in epidemiology in understanding and visualising the onset and progression of an epidemic is immense. It provides key insights in terms of the magnitude of the disease, the mode of transmission, trends over time and the incubation period.&lt;/p&gt;
@@ -83,20 +101,20 @@ Mitra, Arun, Abhijit P. Pakhare, Adrija Roy, and Ankur Joshi. 2020. &lt;span&gt;
     
     <item>
       <title>First and Second Waves of COVID-19 in India</title>
-      <link>/post/first-second-wave-covid-in-india/</link>
+      <link>https://bijusoman.com/post/first-second-wave-covid-in-india/</link>
       <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
-      <guid>/post/first-second-wave-covid-in-india/</guid>
+      <guid>https://bijusoman.com/post/first-second-wave-covid-in-india/</guid>
       <description>
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/post/first-second-wave-covid-in-india/index.en_files/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/moment/moment.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/moment/moment.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The importance of epidemic curves in epidemiology in understanding and visualising the onset and progression of an epidemic is immense. It provides key insights in terms of the magnitude of the disease, the mode of transmission, trends over time and the incubation period.&lt;/p&gt;

@@ -40,6 +40,14 @@ contact_links:
     icon_pack: fab
     name: Linkedin
     link: 'https://www.linkedin.com/in/dr-arunmitra/'
+  - icon: google-scholar
+    icon_pack: ai
+    name: Google Scholar
+    link: 'https://scholar.google.co.in/citations?user=whNtX04AAAAJ'
+  - icon: researchgate
+    icon_pack: ai
+    name: Research Gate
+    link: 'https://www.researchgate.net/profile/Arun-Mitra'
 
 # Site header
 
@@ -143,4 +151,4 @@ cms:
   local_backend: false
 icon:
   pack:
-    ai: false
+    ai: true

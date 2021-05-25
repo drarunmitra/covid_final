@@ -6,23 +6,39 @@ slug: projections-of-covid-19
 categories: []
 tags: []
 subtitle: ''
-summary: ''
+summary: 'This post attempts to project the daily incidence of COVID=19 cases in India. '
 authors: []
 lastmod: '2021-05-21T14:21:02+05:30'
 featured: no
 image:
-  caption: ''
+  caption: '' 
   focal_point: ''
   preview_only: no
 projects: []
+bibliography: references.bib
 ---
 
-This is on the projections
+With the second wave of COVID-19 epidemic wreaking havoc in India, the daily caseload is still on the rise. Though there are many models predicting the daily incidence of new COVID-19 infections, the estimates provided are have high degree of uncertaininty and error. There is an urgent need for robust estimates that may aid the district level programme managers in public health decision making.
 
+This blog post aims at providing robust estimates of daily incidence of COVID-19 for different states of India. The methodology presented here is part of a larger study that involves data science approach and epidemiological techniques in transforming routine data into actionable evidence.
+
+## Data
+
+The crowdsourced database and website maintained at <https://covid19india.org> has been used for the analysis. The application programming interface (API) provides curated datasets available for public use and research purposes. The downloadable dataset is updated regularly and contains the latest available public data on COVID-19 in India.
+
+## Methodology
+
+Before we can make any projections of future daily cases, we need to make some considerations about the data and the COVID-19 epidemic. For the purpose of projecting the daily incident cases, we would consider the data is representative of the true reality.
+
+Taking into consideration the second wave of COVID-19 in India, we thought the best time to freeze the dataset would be 1st May 2021. This was done to include the most recent data but also to avoid any technical or erroneous entries in the recent past, which are usually rectified in a few days. We also decided the number of days for the projection of future incidence to be 15 as any projection beyond two weeks would mean a wide confidence interval and high error rate. Also, as the model is based on the regression of log incidence over time, it would be subject to overestimation as time progresses. We decided on a 14-day moving average of the daily incident cases for modeling the future projections. For the epidemic simulation, we assumed that the branching process of the probability mass function follows a Poisson distribution.
 
 ```{r}
 plot(mtcars)
 ```
 
+Based on these considerations, we then divided the dataset into two based on the date, 15th April 2021. The cases before 15th April 2021 were used to estimate the effective reproduction number by the time-dependent method developed by Wallinga and Teunis and improved by Cauchemez and colleagues.@cauchemez2006ajoe; @wallinga2004aje The effective reproduction number of 15th April 2021 was then extracted and provided as a hyperparameter for the epidemic simulation along with the distribution of the serial interval. As already described, we projected for each state the daily incident cases for the next 15 days and plotted against the observed 14-day moving average to check for the robustness of the effective reproduction number and the validity of the projections.
+
+Much of the tools used in the analysis stem from the packages developed by RECON (REpidemicsConsortium) which is a group of experts in data
+science, modelling methodology, public health, and software development in R like `distcrete`, `EpiEstim` , `earlyR`, `epitrix`, `incidence`, and `projections`.
 
 

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arun Mitra | Academic</title>
-    <link>/author/arun-mitra/</link>
-      <atom:link href="/author/arun-mitra/index.xml" rel="self" type="application/rss+xml" />
+    <title>Arun Mitra | COVID-19 India Analytics</title>
+    <link>https://bijusoman.com/author/arun-mitra/</link>
+      <atom:link href="https://bijusoman.com/author/arun-mitra/index.xml" rel="self" type="application/rss+xml" />
     <description>Arun Mitra</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Arun Mitra (2021)</copyright><lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/author/arun-mitra/avatar_hu58669cd9b382ba7f27ebace64a4769ad_769097_270x270_fill_lanczos_center_2.png</url>
+      <url>https://bijusoman.com/author/arun-mitra/avatar_hu58669cd9b382ba7f27ebace64a4769ad_769097_270x270_fill_lanczos_center_2.png</url>
       <title>Arun Mitra</title>
-      <link>/author/arun-mitra/</link>
+      <link>https://bijusoman.com/author/arun-mitra/</link>
     </image>
     
     <item>
       <title>COVID-19 Epidemic in India</title>
-      <link>/post/covid-19-epidemic-in-india/</link>
+      <link>https://bijusoman.com/post/covid-19-epidemic-in-india/</link>
       <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
-      <guid>/post/covid-19-epidemic-in-india/</guid>
+      <guid>https://bijusoman.com/post/covid-19-epidemic-in-india/</guid>
       <description>
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/post/covid-19-epidemic-in-india/index.en_files/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/moment/moment.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/covid-19-epidemic-in-india/index.en_files/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/moment/moment.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/covid-19-epidemic-in-india/index.en_files/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The importance of epidemic curves in epidemiology in understanding and visualising the onset and progression of an epidemic is immense. It provides key insights in terms of the magnitude of the disease, the mode of transmission, trends over time and the incubation period.&lt;/p&gt;
@@ -68,20 +68,20 @@ Mitra, Arun, Abhijit P. Pakhare, Adrija Roy, and Ankur Joshi. 2020. &lt;span&gt;
     
     <item>
       <title>First and Second Waves of COVID-19 in India</title>
-      <link>/post/first-second-wave-covid-in-india/</link>
+      <link>https://bijusoman.com/post/first-second-wave-covid-in-india/</link>
       <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
-      <guid>/post/first-second-wave-covid-in-india/</guid>
+      <guid>https://bijusoman.com/post/first-second-wave-covid-in-india/</guid>
       <description>
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/post/first-second-wave-covid-in-india/index.en_files/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/moment/moment.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/post/first-second-wave-covid-in-india/index.en_files/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/moment/moment.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://bijusoman.com/post/first-second-wave-covid-in-india/index.en_files/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The importance of epidemic curves in epidemiology in understanding and visualising the onset and progression of an epidemic is immense. It provides key insights in terms of the magnitude of the disease, the mode of transmission, trends over time and the incubation period.&lt;/p&gt;
